@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Social from '../Social.astro';
 const pageTitle = "About Me";
 const identity = {
   firstName: "Sarah",
@@ -37,8 +39,9 @@ const goal = 3;
     </style>
   </head>
   <body>
+    <Header />
     <h1>{pageTitle}</h1>
-    <Navigation />
+    
   <h2>... and my new Astro site!</h2>
 
   <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -63,5 +66,9 @@ const goal = 3;
 {finished && <p>I finished this tutorial!</p>}
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+  <Footer />
+  <script>
+  import "../scripts/menu.js";
+  </script>  
   </body>
 </html>
